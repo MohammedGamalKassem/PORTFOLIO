@@ -1,3 +1,6 @@
+// Prepend Vite base URL so public-folder assets resolve on any deployment subpath
+const p = (path) => `${import.meta.env.BASE_URL}${path}`;
+
 export const HERO_CONTENT = `Aerospace engineering student at Cairo University with a strong foundation in mechanical design, structural analysis, and CAD development. I build things that work — from competition aircraft to industrial robotic systems — combining precision engineering with a drive to solve real-world problems. Proficient in SolidWorks, ANSYS, MATLAB, and Blender, with hands-on experience across the full design lifecycle.`;
 
 export const ABOUT_TEXT = `I'm an aerospace engineering student at Cairo University with a genuine obsession for how things are designed, built, and made to last. My work spans competitive aircraft development, industrial machine design, and high-fidelity 3D visualization — giving me a broad but grounded perspective on what it means to engineer something properly.
@@ -20,14 +23,14 @@ export const PROJECTS = [
   {
     id: "dbf",
     title: "Design/Build/Fly (DBF) Competition Aircraft",
-    coverImage: "/projects/dbf/pics/Assem1.png",
+    coverImage: p('projects/dbf/pics/Assem1.png'),
     images: [
-      "/projects/dbf/pics/Assem1.png",
-      "/projects/dbf/pics/Dihedral_assem2.jpg",
-      "/projects/dbf/pics/internal.png",
-      "/projects/dbf/pics/screenshot.png",
+      p('projects/dbf/pics/Assem1.png'),
+      p('projects/dbf/pics/Dihedral_assem2.jpg'),
+      p('projects/dbf/pics/internal.png'),
+      p('projects/dbf/pics/screenshot.png'),
     ],
-    videos: ["/projects/dbf/vids/assem.mp4"],
+    videos: [p('projects/dbf/vids/assem.mp4')],
     description: `As Team Leader and Lead Mechanical Designer for the AIAA Design/Build/Fly competition, I directed the end-to-end development of a high-performance competition aircraft. The project required balancing structural integrity against aggressive weight targets, while surviving high-impact landings and meeting strict payload and CG constraints.`,
     highlights: [
       "Led a multidisciplinary team through the full design, fabrication, and flight testing cycle, coordinating mechanical, avionics, and aerodynamics workstreams under competition deadlines.",
@@ -43,12 +46,12 @@ export const PROJECTS = [
   {
     id: "battery-sorter",
     title: "Automated Battery Sorting System — OSCORP ENERGY",
-    coverImage: "/projects/battery-sorter/pics/new.png",
+    coverImage: p('projects/battery-sorter/pics/new.png'),
     images: [
-      "/projects/battery-sorter/pics/new.png",
-      "/projects/battery-sorter/pics/1.png",
+      p('projects/battery-sorter/pics/new.png'),
+      p('projects/battery-sorter/pics/1.png'),
     ],
-    videos: ["/projects/battery-sorter/vids/batsort.mp4"],
+    videos: [p('projects/battery-sorter/vids/batsort.mp4')],
     description: `Developed as part of my work at OSCORP ENERGY, this robotic sorting system automates the identification and separation of batteries in an industrial recycling facility. The design required navigating the challenges of a harsh, vibration-heavy environment while integrating two high-speed Delta robots into a scalable, cost-efficient structure.`,
     highlights: [
       "Engineered a heavy-duty structural framework to support dual Delta robots, validated to withstand double the operational load requirements while effectively dampening vibrations from robotic kinematics and heavy conveyors.",
@@ -63,10 +66,10 @@ export const PROJECTS = [
   {
     id: "site-layout",
     title: "3D Industrial Facility Visualization — OSCORP ENERGY",
-    coverImage: "/projects/site-layout/pics/1_hl_brightness.png",
+    coverImage: p('projects/site-layout/pics/1_hl_brightness.png'),
     images: [
-      "/projects/site-layout/pics/1_hl_brightness.png",
-      "/projects/site-layout/pics/1.png",
+      p('projects/site-layout/pics/1_hl_brightness.png'),
+      p('projects/site-layout/pics/1.png'),
     ],
     videos: [],
     description: `Commissioned by OSCORP ENERGY to produce a comprehensive 3D facility layout for an executive-level presentation. The goal was to transform conceptual references into a mechanically accurate, visually clear environment — with every piece of industrial equipment modeled from scratch and assembled into a coherent plant layout.`,
@@ -83,10 +86,10 @@ export const PROJECTS = [
   {
     id: "vision-os",
     title: "Machine Vision System Housing — OSCORP ENERGY",
-    coverImage: "/projects/vision-os/pics/sample_2.png",
+    coverImage: p('projects/vision-os/pics/sample_2.png'),
     images: [
-      "/projects/vision-os/pics/sample_2.png",
-      "/projects/vision-os/pics/5.png",
+      p('projects/vision-os/pics/sample_2.png'),
+      p('projects/vision-os/pics/5.png'),
     ],
     videos: [],
     description: `Designed a ruggedized housing solution for an industrial machine vision system deployed on active recycling sorting lines. The core challenge was protecting sensitive camera optics and electronics from continuous high-frequency vibrations and a harsh, contamination-heavy environment — without compromising optical precision or accessibility.`,
@@ -103,15 +106,15 @@ export const PROJECTS = [
   {
     id: "v8",
     title: "V8 Engine Functional Replica",
-    coverImage: "/projects/v8/pics/V8_Engine_exploded.png",
+    coverImage: p('projects/v8/pics/V8_Engine_exploded.png'),
     images: [
-      "/projects/v8/pics/V8_Engine_exploded.png",
-      "/projects/v8/pics/assem_withoutgears.png",
-      "/projects/v8/pics/block.png",
-      "/projects/v8/pics/oil.png",
-      "/projects/v8/pics/piso.png",
+      p('projects/v8/pics/V8_Engine_exploded.png'),
+      p('projects/v8/pics/assem_withoutgears.png'),
+      p('projects/v8/pics/block.png'),
+      p('projects/v8/pics/oil.png'),
+      p('projects/v8/pics/piso.png'),
     ],
-    videos: ["/projects/v8/vids/Anim0.mp4"],
+    videos: [p('projects/v8/vids/Anim0.mp4')],
     description: `A personal deep-dive into complex mechanical assemblies. I modeled a complete, fully functional V8 engine from the ground up in SolidWorks — every component engineered with accurate tolerances and realistic mechanical mating, from crankshaft to valvetrain. The goal was both to sharpen my assembly and kinematic design skills and to produce a clear, professional reference for how these systems work.`,
     highlights: [
       "Modeled all major engine components from scratch — crankshaft, pistons, connecting rods, camshaft, valvetrain, and engine block — with accurate tolerances and proper mechanical constraints throughout.",
@@ -125,18 +128,18 @@ export const PROJECTS = [
   {
     id: "wig",
     title: "Wing-In-Ground (WIG) Effect Aircraft",
-    coverImage: "/projects/wig/pics/renders/render.png",
+    coverImage: p('projects/wig/pics/renders/render.png'),
     images: [
-      "/projects/wig/pics/renders/render.png",
-      "/projects/wig/pics/renders/render_exploaded.png",
-      "/projects/wig/pics/analysis/def_wing.png",
-      "/projects/wig/pics/analysis/stress_wing.png",
-      "/projects/wig/pics/analysis/comp_fail_ans.png",
-      "/projects/wig/pics/analysis/BC_tot.png",
-      "/projects/wig/pics/analysis/H_1.2mm_def.png",
-      "/projects/wig/pics/analysis/V_1.2mm_stress.png",
+      p('projects/wig/pics/renders/render.png'),
+      p('projects/wig/pics/renders/render_exploaded.png'),
+      p('projects/wig/pics/analysis/def_wing.png'),
+      p('projects/wig/pics/analysis/stress_wing.png'),
+      p('projects/wig/pics/analysis/comp_fail_ans.png'),
+      p('projects/wig/pics/analysis/BC_tot.png'),
+      p('projects/wig/pics/analysis/H_1.2mm_def.png'),
+      p('projects/wig/pics/analysis/V_1.2mm_stress.png'),
     ],
-    videos: ["/projects/wig/vids/assem.mp4"],
+    videos: [p('projects/wig/vids/assem.mp4')],
     description: `Led a cross-functional team for a 3rd-year aerospace engineering final project — a Wing-In-Ground (WIG) effect aircraft that exploits aerodynamic ground effect for highly efficient, low-altitude flight. I was responsible for the complete mechanical architecture, structural analysis, and final technical visualization of the airframe.`,
     highlights: [
       "Engineered a lightweight, high-stiffness hybrid airframe: carbon fiber composite wing, 1060-H12 aluminum T-tail skeleton, and custom 3D-printed fuselage joints with internal isogrid reinforcement.",
